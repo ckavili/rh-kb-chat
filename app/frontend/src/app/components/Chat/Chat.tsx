@@ -143,7 +143,7 @@ const Chat: React.FunctionComponent<ChatProps> = ({ selectedLanguage }) => {
     setCollectionFullName(value);
     const collection = collections.find(collection => collection.collection_full_name === value);
     if (collection) {
-      const version = collection.versions[0].version_number;
+      const version = collection.versions[collection.versions.length-1].version_number;
       updateCollection(collection, version);
     }
   }
