@@ -241,7 +241,6 @@ const ChatAnswer = forwardRef((props: ChatAnswerProps, ref: Ref<ChatAnswerRef>) 
             </FlexItem>
             )}
         </Flex>
-
       </FlexItem>
       <FlexItem>
         <TextContent id='chatBotAnswer'>

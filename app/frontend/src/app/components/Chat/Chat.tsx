@@ -251,7 +251,7 @@ const Chat: React.FunctionComponent<ChatProps> = ({ selectedLanguage }) => {
                   {/* ChatbotAnswer panels */}
                   <StackItem isFilled className='chat-bot-answer'>
                     <Grid hasGutter
-                      span={items.length === 1 ? 12 : 6}
+                      span={Math.floor(12 / (items.length)) as any}
                       style={{
                         gap: '16px',
                       }}>
