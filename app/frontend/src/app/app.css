@@ -178,7 +178,27 @@ body,
   bottom: 5%;
   right: 0;
   width: 1px;
-  background-color: #ccc;
+  background: linear-gradient(
+    to bottom,
+    red,
+    orange,
+    yellow,
+    green,
+    blue,
+    indigo,
+    violet
+  );
+  background-size: 100% 400%;
+  animation: rainbow-border 20s linear infinite;
+}
+
+@keyframes rainbow-border {
+  0% {
+    background-position: 0% 0%;
+  }
+  100% {
+    background-position: 0% 400%;
+  }
 }
 
 .chat-grid-item:only-child::before {
