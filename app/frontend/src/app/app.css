@@ -160,6 +160,39 @@ body,
   font-family: 'RedHatText', helvetica, arial, sans-serif !important;
 }
 
+.chat-grid {
+  grid-gap: 10px;
+  height: 100% !important;
+}
+
+.chat-grid-item {
+  /* border-right: 1px solid #ccc; */
+  height: 100% !important;
+}
+
+.chat-grid-item {
+  position: relative;
+  height: 100% !important;
+}
+
+.chat-grid-item::before {
+  content: "";
+  position: absolute;
+  top: 5%;
+  bottom: 5%;
+  right: 0;
+  width: 1px;
+  background-color: #ccc;
+}
+
+.chat-grid-item:only-child::before {
+  display: none;
+}
+
+.chat-grid-item:last-child::before {
+  display: none;
+}
+
 .chat-source-text {
   font-style: italic;
   padding-top: 0px;

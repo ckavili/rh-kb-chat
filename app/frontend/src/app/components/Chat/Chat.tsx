@@ -251,12 +251,10 @@ const Chat: React.FunctionComponent<ChatProps> = ({ selectedLanguage }) => {
                   {/* ChatbotAnswer panels */}
                   <StackItem isFilled className='chat-bot-answer'>
                     <Grid hasGutter
-                      span={Math.floor(12 / (items.length)) as any}
-                      style={{
-                        gap: '16px',
-                      }}>
+                      className="chat-grid"
+                      span={Math.floor(12 / (items.length)) as any}>
                       {items.map((item, index) => (
-                        <GridItem key={index}>
+                        <GridItem key={index} className='chat-grid-item'>
                           {/* Replace with your ChatAnswer component */}
                           {item}
                         </GridItem>
