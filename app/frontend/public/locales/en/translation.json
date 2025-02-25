@@ -16,8 +16,8 @@
   "chat": {
     "title": "Documentation Assistant",
     "filter": {
-      "product": "Product",
-      "version": "Version",
+      "product": "Red Hat Product:",
+      "version": "Version:",
       "language": "Language"
     },
     "placeholder": "Ask me anything...",

@@ -74,12 +74,6 @@ const Chat: React.FunctionComponent<ChatProps> = ({ selectedLanguage }) => {
 
   //i18n
   const { t, i18n } = useTranslation();
-  /*   React.useEffect(() => {
-      console.log('selectedLanguage: ', selectedLanguage)
-      i18n.changeLanguage(selectedLanguage);
-      resetMessageHistory();
-    }, [selectedLanguage]); */
-
 
   // Collection elements
   const [collections, setCollections] = React.useState<Collection[]>([]); // The collections
@@ -186,7 +180,7 @@ const Chat: React.FunctionComponent<ChatProps> = ({ selectedLanguage }) => {
             <Flex>
               <FlexItem>
                 <Flex direction={{ default: 'row' }}>
-                  <FlexItem>
+                  <FlexItem className='collection-version-language-legends' >
                     <TextContent>
                       <Text component={TextVariants.h3} >{t('chat.filter.product')}</Text>
                     </TextContent>
@@ -208,7 +202,7 @@ const Chat: React.FunctionComponent<ChatProps> = ({ selectedLanguage }) => {
               </FlexItem>
               <FlexItem>
                 <Flex direction={{ default: 'row' }}>
-                  <FlexItem>
+                  <FlexItem className='collection-version-language-legends'>
                     <TextContent>
                       <Text component={TextVariants.h3} >{t('chat.filter.version')}</Text>
                     </TextContent>

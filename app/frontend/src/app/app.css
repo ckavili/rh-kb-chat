@@ -36,6 +36,10 @@ body,
   padding-right: 10px;
 }
 
+.collection-version-language-legends {
+  margin-right: 5px !important;
+}
+
 .collection-select {
   width: 500px;
 }
