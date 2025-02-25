@@ -211,35 +211,27 @@ const ChatAnswer = forwardRef((props: ChatAnswerProps, ref: Ref<ChatAnswerRef>) 
 
   return (
     <Flex direction={{ default: 'column' }}>
-      <FlexItem>
-        <Flex direction={{ default: 'row' }}>
-          <FlexItem>
-            <FormSelect
-              value={selectedLLM}
-              onChange={onChangeLlm}
-              aria-label="FormSelect Input"
-              ouiaId="BasicFormSelectCategory"
-              className='chat-llm-select'
-            >
-              {llms && llms.map((llm, index) => (
-                <FormSelectOption key={index} value={llm.name} label={llm.name} />
-              ))}
-            </FormSelect>
-          </FlexItem>
-          {ttft !== 0 && (
-            <FlexItem>
-              <TextContent>
-              <Text className="token-metrics">{ttft.toFixed(2)}s to first token,</Text>
-              </TextContent>
-            </FlexItem>
-            )}
-            {tps !== 0 && (
-            <FlexItem>
-              <TextContent>
-              <Text className="token-metrics">{tps.toFixed(2)} tokens/s</Text>
-              </TextContent>
-            </FlexItem>
-            )}
+      <FlexItem >
+        <Flex direction={{ default: 'row' }} className='chat-llm-select'>
+          <FormSelect
+            value={selectedLLM}
+            onChange={onChangeLlm}
+            aria-label="FormSelect Input"
+            ouiaId="BasicFormSelectCategory"
+            className='chat-llm-select'
+          >
+            {llms && llms.map((llm, index) => (
+              <FormSelectOption key={index} value={llm.name} label={llm.name} />
+            ))}
+          </FormSelect>
+            <TextContent style={{ display: 'flex', alignItems: 'normal' }}>
+          {ttft !== 0 && (            
+              <Text className="token-metrics">{ttft.toFixed(2)}s tft,</Text>
+          )}
+          {tps !== 0 && (
+              <Text className="token-metrics">{tps.toFixed(2)} t/s</Text>
+          )}
+          </TextContent>
         </Flex>
       </FlexItem>
       <FlexItem>
