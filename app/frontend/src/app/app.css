@@ -167,15 +167,15 @@ body,
 
 
 .chat-grid-item {
+  height: 100%;
   position: relative;
-  height: 100% !important;
 }
 
 .chat-grid-item::before {
   content: "";
   position: absolute;
-  top: 5%;
-  bottom: 5%;
+  top: 0;
+  bottom: 0;
   right: 0;
   width: 1px;
   background: linear-gradient(
@@ -190,7 +190,17 @@ body,
   );
   background-size: 100% 400%;
   animation: rainbow-border 20s linear infinite;
+
+  /* Apply the mask to the pseudo-element */
+  mask: linear-gradient(
+    to bottom,
+    transparent 5%,
+    black 5%,
+    black 95%,
+    transparent 95%
+  );
 }
+
 
 @keyframes rainbow-border {
   0% {
