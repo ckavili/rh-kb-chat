@@ -73,13 +73,14 @@ body,
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
-  padding-top: 20px;
+  padding-top: 5px;
 }
 
 .chat-card {
   border-radius: 10px !important;
-  width: 95%;
-  height: 75vh;
+  width: 99%;
+  height: calc(100vh - 185px);
+  flex-grow: 1;
 }
 
 .chat-card-header {
