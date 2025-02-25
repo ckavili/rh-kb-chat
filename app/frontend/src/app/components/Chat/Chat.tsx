@@ -94,8 +94,9 @@ const Chat: React.FunctionComponent<ChatProps> = ({ selectedLanguage }) => {
       setCollections(data);
       setCollectionFullName(data[0].collection_full_name);
       setVersions(data[0].versions);
-      setSelectedVersion(data[0].versions[0].version_number);
-      setSelectedCollection((data[0].collection_base_name + '_' + data[0].versions[0].version_number).replace(/[.-]/g, '_'));
+      const last_version = data[0].versions[data[0].versions.length - 1].version_number;
+      setSelectedVersion(last_version);
+      setSelectedCollection((data[0].collection_base_name + '_' + last_version).replace(/[.-]/g, '_'));
     }
     fetchCollections();
   }, []);
