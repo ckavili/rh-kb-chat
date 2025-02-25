@@ -228,10 +228,10 @@ const Chat: React.FunctionComponent<ChatProps> = ({ selectedLanguage }) => {
               <FlexItem>
                 <div style={{ marginBottom: "16px", display: "flex", gap: "8px" }}>
                   <Button onClick={addItem} variant="primary">
-                    Add Answer Model
+                    Add LLM
                   </Button>
                   <Button onClick={removeItem} variant="danger" isDisabled={items.length === 0}>
-                    Remove Last Model
+                    Remove last LLM
                   </Button>
                 </div>
               </FlexItem>
