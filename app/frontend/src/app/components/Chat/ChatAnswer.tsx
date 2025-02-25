@@ -47,7 +47,6 @@ const ChatAnswer = forwardRef((props: ChatAnswerProps, ref: Ref<ChatAnswerRef>) 
 
   // Stopwatch and timer#
   const startTime = useRef<number | null>(null);
-  const [stopTime, setStopTime] = React.useState<number>(0);
   const [tokens, setTokens] = React.useState<number>(0);
   const [ttft, setTtft] = React.useState<number>(0);
   const [tps, setTps] = React.useState<number>(0);
@@ -165,6 +164,9 @@ const ChatAnswer = forwardRef((props: ChatAnswerProps, ref: Ref<ChatAnswerRef>) 
       setMessageHistory(new MessageHistory([...previousMessageHistory.content, previousAnswer, previousSources, previousQuery])); // Add the previous response to the message history
       setAnswerText(new Answer([])); // Clear the previous response
       setAnswerSources(new Sources([])); // Clear the previous sources
+      setTokens(0);
+      setTps(0);
+      setTtft(0);
       // Put the query in a JSON object so that we can add other info later
       if (query.content !== "") {
         let data = {
