@@ -165,10 +165,6 @@ body,
   height: 100% !important;
 }
 
-.chat-grid-item {
-  /* border-right: 1px solid #ccc; */
-  height: 100% !important;
-}
 
 .chat-grid-item {
   position: relative;
